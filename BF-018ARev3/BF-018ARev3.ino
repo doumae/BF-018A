@@ -459,6 +459,9 @@ const int button_atoms3(41);  // GPIO41
 
 void setup()
 {
+
+  Serial.begin(115200);
+  
   if (M5.getBoard() == m5::board_t::board_M5Atom) {
     // To avoid Wi-Fi issues, force GPIO0 to 0 while CH552 outputs 5V with its internal pullup.
     // https://twitter.com/wakwak_koba/status/1553162622479974400
